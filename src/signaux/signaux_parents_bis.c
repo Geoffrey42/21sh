@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   signaux_parents_bis.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 16:57:55 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/13 15:51:22 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/12 16:57:55 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:14:12 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void		signal_catcher_bis(int catched_signal)
 
 static void	error_malloc(char *s)
 {
-		miniprintf(STDERR_FILENO, s);
-		exit(EXIT_FAILURE);
+	miniprintf(STDERR_FILENO, s);
+	exit(EXIT_FAILURE);
 }
 
 int			signal_handler_bis(char mode, int sigint_behavior, int pid)
