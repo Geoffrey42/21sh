@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   globbing_bis.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/13 17:34:13 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 00:07:29 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/13 17:34:13 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:25:33 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ char	*ft_strdup_spaces(char *s)
 
 char	**conversion(t_list_glob **lst)
 {
-	char	**ret;
-	int		i;
+	char		**ret;
+	int			i;
 	t_list_glob *temp;
 
 	ret = (char**)malloc((size_list(*lst) + 1) * sizeof(char*));

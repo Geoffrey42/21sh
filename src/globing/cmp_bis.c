@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cmp_bis.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/13 17:24:11 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 00:05:51 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/13 17:24:11 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:27:36 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*glob_strstr(char *s1, char *s2)
 	return (NULL);
 }
 
-int			glob_strncmp(char *s1, char *s2, size_t n)
+int		glob_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t	i;
 	size_t	y;

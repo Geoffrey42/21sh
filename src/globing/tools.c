@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/19 18:58:36 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 00:08:21 by piranucc         ###   ########.fr       */
+/*   Created: 2017/02/19 18:58:36 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:27:21 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "globbing.h"
 
-int		find(char *str)
+int			find(char *str)
 {
 	while (*str)
 	{
