@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   heredoc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/06 18:51:24 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:22:04 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/06 18:51:24 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:41:49 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int		ft_multiple_opt(char **text, t_var *term, int *j)
 
 void	ft_hdc_out(t_var *term, int fd_tab[2], char *text)
 {
-	int fd;
-	int fd_bis;
-	char buf[2];
-	char *tmp;
+	int		fd;
+	int		fd_bis;
+	char	buf[2];
+	char	*tmp;
 
 	tmp = ft_strdup("\0");
 	close(fd_tab[0]);
@@ -51,15 +51,15 @@ void	ft_hdc_out(t_var *term, int fd_tab[2], char *text)
 		}
 		write(fd, tmp, ft_strlen(tmp));
 		close(fd_bis);
-		close (fd);
+		close(fd);
 	}
 }
 
 void	ft_hdc_read(t_var *term, int fd_tab[2])
 {
-	int fd;
-	char buf[2];
-	char *tmp;
+	int		fd;
+	char	buf[2];
+	char	*tmp;
 
 	tmp = ft_strdup("\0");
 	fd = open(term->redir[3], O_RDONLY);
@@ -98,7 +98,7 @@ int		heredoc(t_var *term, int *j)
 	ft_init_heredoc(term);
 	if (ft_multiple_opt(&text, term, j) == 0)
 		return (0);
-	if (!term->hdc  || ((term->hdc && term->numredir == 0) && term->truc == 0))
+	if (!term->hdc || ((term->hdc && term->numredir == 0) && term->truc == 0))
 	{
 		pipe(fd_tab);
 		((pid = fork()) > 0) ? waitpid(-1, &status, 0) : (0);

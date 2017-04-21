@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   gift_pipe_one.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 06:26:21 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:27:14 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/20 06:26:21 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:03:22 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh42.h"
 
-int	is_file(char **s, char **cmd)
+int		is_file(char **s, char **cmd)
 {
 	int i;
 	int	ret;
@@ -59,7 +59,7 @@ void	ft_free_next_cmd(char ***cmd, int i)
 	}
 }
 
-void		ft_init_loop_red(t_var *var)
+void	ft_init_loop_red(t_var *var)
 {
 	var->from = 0;
 	var->to = 0;
@@ -68,7 +68,7 @@ void		ft_init_loop_red(t_var *var)
 	var->repeat = 0;
 }
 
-void		ft_aggreg_close(t_var *var, int *fd)
+void	ft_aggreg_close(t_var *var, int *fd)
 {
 	var->old_stderr = dup(STDERR_FILENO);
 	close(STDERR_FILENO);
@@ -79,7 +79,7 @@ void		ft_aggreg_close(t_var *var, int *fd)
 	var->to = 0;
 }
 
-void		ft_loop_redir_spe(t_var *var, char ***cmd, int *i)
+void	ft_loop_redir_spe(t_var *var, char ***cmd, int *i)
 {
 	var->hdc = 1;
 	var->numredir = is_file(&var->filename, *cmd);

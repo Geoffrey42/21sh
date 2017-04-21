@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   heredoc_bis.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 06:19:35 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:20:29 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/20 06:19:35 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:46:21 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ char	*loop_loop_heredoc(t_var *term)
 {
 	char	buf[BSIZE];
 	char	*ret;
-	int		 index;
+	int		index;
 	char	*tmp;
 
 	index = 0;
 	term->cd = 0;
 	ret = ft_strdup("\0");
 	ft_putstr("heredoc > ");
-	while (!ENTER || buf[0]!= 4)
+	while (!ENTER || buf[0] != 4)
 	{
 		init_termios(term);
 		ft_bzero(buf, BSIZE);
@@ -70,8 +70,8 @@ int		loop_heredoc(t_var *term, char **tmp, char *key)
 {
 	char	*tmp1;
 	char	*tmp2;
-	(void)tmp;
 
+	(void)tmp;
 	tmp1 = NULL;
 	tmp1 = loop_loop_heredoc(term);
 	if (ft_strcmp(tmp1, key) == 0)

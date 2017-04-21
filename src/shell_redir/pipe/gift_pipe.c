@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gift_pipe.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/03 12:16:29 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:44:34 by piranucc         ###   ########.fr       */
+/*   Created: 2017/02/03 12:16:29 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:01:35 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	ft_init_loopipe(int *j, int *status, int *fd_in)
 	*fd_in = 0;
 }
 
-int		loop_pipe2(char	***cmd, t_var *var)
+int		loop_pipe2(char ***cmd, t_var *var)
 {
 	int		p[2];
 	pid_t	pid;

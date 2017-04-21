@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   no_pipe.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 00:18:24 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:51:11 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/20 00:18:24 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 17:59:56 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,16 +106,15 @@ int			ft_no_pipe(t_var *var)
 		if (ft_strcmp(var->logic[i], "||") && ft_strcmp(var->logic[i], "&&"))
 		{
 			(i > 0 && ft_strcmp(var->logic[i - 1], "||") &&
-			 ft_strcmp(var->logic[i - 1], "&&")) ? res = -1 : (0);
+				ft_strcmp(var->logic[i - 1], "&&")) ? res = -1 : (0);
 			(!ft_search_redir(var->logic[i]) &&
-			 (arg = ft_strsplit_sp(var->logic[i])) != NULL) ?
-				ft_no_redir(arg, var, &ret, &res) : (0);
+				(arg = ft_strsplit_sp(var->logic[i])) != NULL) ?
+					ft_no_redir(arg, var, &ret, &res) : (0);
 			(ft_search_redir(var->logic[i])) ?
 				ft_all_redir(var, i, &ret, &res) : (0);
 		}
-		else
-			if (ft_and_or(&i, var, res) == -1)
-				return (-1);
+		else if (ft_and_or(&i, var, res) == -1)
+			return (-1);
 	i = -1;
 	return (var->var_ret);
 }

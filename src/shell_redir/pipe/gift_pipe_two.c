@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gift_pipe_two.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 06:29:10 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:30:48 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/20 06:29:10 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:04:08 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void		ft_free_loop_cmd(char ***cmd, int *i)
 	}
 }
 
-void	ft_loop_red(t_var *var, int j, char ***cmd)
+void		ft_loop_red(t_var *var, int j, char ***cmd)
 {
 	int	i;
 	int	fd;

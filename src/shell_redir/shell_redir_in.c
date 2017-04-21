@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shell_redir_in.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/07 18:19:55 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:51:10 by piranucc         ###   ########.fr       */
+/*   Created: 2017/02/07 18:19:55 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:06:54 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ void	open_file_in(char **tabl, int *fd, int i)
 void	redir_in(t_var *term, int *j)
 {
 	int	i;
+
 	term->out = 0;
 	term->in = 0;
 	term->err = 0;
-
 	i = *j - 1;
 	loop_init_redir_in(term, j);
 	if (ft_strcmp(term->redir[term->in], "<") == 0)

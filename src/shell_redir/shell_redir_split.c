@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shell_redir_split.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/11 13:14:00 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/17 21:32:07 by piranucc         ###   ########.fr       */
+/*   Created: 2017/04/11 13:14:00 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:08:28 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,7 @@ void	loop_redir(t_var *term, int index, int i)
 		== '1') || (term->pipe[index][i + 1] == '2')))
 		{
 			term->redir[a][b++] = term->pipe[index][i++];
-			 term->redir[a][b++] = term->pipe[index][i++];
-
+			term->redir[a][b++] = term->pipe[index][i++];
 		}
 		suite_loop_redir(term, &i, &a, &b);
 	}

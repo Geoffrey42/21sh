@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shell_redir.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: piranucc <piranucc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/07 18:31:02 by piranucc          #+#    #+#             */
-/*   Updated: 2017/04/20 06:46:35 by piranucc         ###   ########.fr       */
+/*   Created: 2017/02/07 18:31:02 by ggane             #+#    #+#             */
+/*   Updated: 2017/04/21 18:06:19 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ void	ft_count_tab(t_var *term, int index)
 
 int		ft_valid(t_var *term, int i)
 {
-	if ((ft_strcmp(term->redir[i], "<") ==  0) &&
+	if ((ft_strcmp(term->redir[i], "<") == 0) &&
 	((ft_strcmp(term->redir[i + 2], ">") == 0) ||
-	(ft_strcmp(term->redir[i + 2], ">>") == 0 )) && term->ifpipe)
+	(ft_strcmp(term->redir[i + 2], ">>") == 0)) && term->ifpipe)
 		return (4);
 	else if ((ft_strcmp(term->redir[i], ">") == 0) ||
 			(ft_strcmp(term->redir[i], ">>") == 0) ||
@@ -105,7 +105,7 @@ void	redir_pipe(t_var *term, int i)
 		{
 			term->hdc = 1;
 			if (heredoc(term, &j) == 0)
-					exit(0);
+				exit(0);
 		}
 		else if (term->redir[j] && ft_isdigit(term->redir[j][0]) &&
 		term->redir[j][1] == '>' && term->redir[j][2] == '&' &&
